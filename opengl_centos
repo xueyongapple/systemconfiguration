@@ -1,0 +1,18 @@
+yum install mesa-libGL-devel.x86_64
+yum install  mesa-libGLU-devel.x86_64
+error: X11/extensions/Xrandr.h: No such file or directory
+ 
+yum install libXrandr-devel.x86_64
+yum install libXinerama-devel.x86_64
+yum install libXcursor-devel.x86_64
+解决/usr/bin/ld: cannot find -lXi
+ 
+ln -s /usr/lib64/libXi.so.6 /usr/lib64/libXi.so
+pkg-config –cflags portaudio-2.0
+Package portaudio-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `portaudio-2.0.pc’
+to the PKG_CONFIG_PATH environment variable
+No package ‘portaudio-2.0’ found
+pkg-config: exit status 1
+ 
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
